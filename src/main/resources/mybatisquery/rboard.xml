@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.brownpoodle.rboard.dao.RboardDAO">
+
+	<!-- 댓글 전체 조회  -->
+	<select id="rboardSelectAll" parameterType="rboardVO" resultType="rboardVO">
+		SELECT 
+				RB_NUM, B_NUM, RB_NAME, RB_CONTENT,
+				RB_DELETEYN, TO_CHAR(RB_INSERTDATE, 'YYYY-MM-DD') RB_INSERTDATE,
+				TO_CHAR(RB_UPDATEDATE, 'YYYY-MM-DD') RB_UPDATEDATE
+		FROM 	RBOARD
+		WHERE 	RB_DELETEYN = 'Y'
+		AND 	B_NUM = #{b_num}
+		ORDER BY RB_NUM
+	</select>
+	
+	<!-- 댓글 상세 조회 -->
+	<select id="rboardSelect" resultType="rboardVO">
+		SELECT 
+				RB_NUM, B_NUM, RB_NAME, RB_CONTENT,
+				RB_DELETEYN, TO_CHAR(RB_INSERTDATE, 'YYYY-MM-DD') RB_INSERTDATE,
+				TO_CHAR(RB_UPDATEDATE, 'YYYY-MM-DD') RB_UPDATEDATE
+		FROM 	RBOARD
+		WHERE 	RB_DELETEYN = 'Y'
+		AND 	RB_NUM = #{rb_num}
+	</select>
+	
+	<!-- 댓글 입력 -->
+	<insert id="rboardInsert" parameterType="rboardVO">
+		INSERT INTO RBOARD
+		(	RB_NUM, B_NUM, RB_NAME, RB_CONTENT,
+			RB_DELETEYN, RB_INSERTDATE, RB_UPDATEDATE
+		)
+		VALUES
+		(	#{rb_num}, #{b_num}, #{rb_name},#{rb_content},
+			'Y', SYSDATE, SYSDATE
+		)
+	</insert>
+	
+	<!-- 댓글 수정 -->
+	<update id="rboardUpdate" parameterType="rboardVO">
+		UPDATE RBOARD SET
+				RB_CONTENT = #{rb_content},
+				RB_UPDATEDATE = SYSDATE
+		WHERE 	RB_DELETEYN = 'Y'
+		AND 	RB_NUM = #{rb_num}
+	</update>
+	
+	<!-- 댓글 삭제 -->
+	<update id="rboardDelete" parameterType="rboardVO">
+		UPDATE RBOARD SET
+				RB_DELETEYN = 'N',
+				RB_UPDATEDATE = SYSDATE
+		WHERE 	RB_DELETEYN = 'Y'
+		AND 	RB_NUM = #{rb_num}
+	</update>
+</mapper>

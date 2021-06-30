@@ -1,0 +1,193 @@
+@charset "EUC-KR";
+
+a { text-decoration:none } 
+.logot{
+	background-color: #FFFFFF;
+	border-collapse: collapse
+}
+
+
+.logotr{
+	border-collapse: collapse;
+}
+
+
+.logotdh{
+	padding-left: 100px;
+	padding-right: 8px;
+}
+
+.logotd{
+	height: 80px;
+}
+
+.logotdtext{
+	padding-right: 347px;
+}
+
+.logotdicon1{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.logotdicon2{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.logotdicon3{
+	padding-left: 100px;
+	padding-right: 113px;
+}
+
+.logotdlogin{
+	padding-left: 345px;
+	padding-right: 10px;
+	color: #4e4c4c;
+}
+
+.logotdloginp{
+	padding-right: 131px;
+}
+
+.leftside{
+	padding-left: 96px;
+	color:#4e4c4c;
+}
+
+.leftside{
+	padding-top: 30px;
+}
+.leftsidetd{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: 20px;
+}
+.leftsidetext{
+	padding-left: 32px;
+	padding-bottom: 5px;
+}
+
+.board{
+
+	margin-top: 52px;
+    margin-left: 626px;
+	margin-right: 352px;
+	width: 680px;
+	background-color: #FFFFFF;
+	border-collapse: collapse;
+	border-radius:8px;
+	box-shadow: 0 1px 2px #ccc;
+
+}
+
+.boardtd{
+	border-collapse: collapse;
+	border-spacing:0;
+
+}
+.boardtdphoto{
+	border-collapse: collapse;
+	border-spacing:0;
+
+}
+
+.photo{
+ 	width: 680px;
+  	height: object-fit: contain;
+}
+
+.boardprofile{
+	width: 30px;
+	padding-left: 17px;
+	padding-top: 14px;
+	padding-bottom: 11px;
+
+}
+
+.boardadd{
+	padding-right: 4px;
+	padding-top: 20px;
+}
+
+.boardlike{
+    width: 30px;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 11px;
+    display: block;
+	
+}
+
+.boardlikecount{
+	padding-bottom: 12px;
+	width: 100px;
+	color: #8b8989;
+}
+
+.boardrewrite{
+	padding-bottom: 12px;
+	color: #8b8989;
+}
+
+.boardreport{
+    padding-left: 364px;
+    padding-bottom: 12px;
+    color: #8b8989;
+}
+
+.boardprofilname{
+	padding-left:15px;
+	font-size:13pt;
+}
+
+.boardprofiltime{
+	font-size:9pt;
+	color: #65676b;
+}
+
+.boardre{
+	padding-left:20px;
+	padding-right: 12px;
+	width:20px;
+	padding-bottom: 12px;
+}
+
+.boardline{
+	padding-left:15px;
+	height: 22px;
+}
+.boardcontent{
+	padding-left: 17px;
+	padding-top: 14px;
+}
+.boardfoot{
+	width:100%;
+	padding: 0 50px 0 50px;
+}
+
+.fix{
+	margin-right: 96px;
+}
+
+.b_like{
+	border: solid #ffffff 1px;
+	    width: 100px;
+	    color: #8b8989;
+}
+
+.rightside{
+	border: 1px solid black;
+}
+
+
+
+span{ 
+	font-size: 12px; 
+}
+
+
+body {
+	background-color: #EEEEEE;
+	margin:0 auto; 
+	}

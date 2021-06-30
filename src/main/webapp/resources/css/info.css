@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+a { text-decoration:none } 
+
+.logot{
+	background-color: #FFFFFF;
+	border-collapse: collapse
+}
+
+
+.logotr{
+	border-collapse: collapse;
+}
+
+.mapbutton{
+	margin-left: 10px;
+}
+
+.logotdh{
+	padding-left: 100px;
+	padding-right: 8px;
+}
+
+.logotd{
+	height: 80px;
+}
+
+.logotdtext{
+	padding-right: 347px;
+}
+
+.logotdicon1{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.logotdicon2{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.logotdicon3{
+	padding-left: 100px;
+	padding-right: 113px;
+}
+
+.logotdlogin{
+	padding-left: 362px;
+	padding-right: 10px;
+	color: #4e4c4c;
+}
+
+.logotdloginp{
+	padding-right: 109px;
+}
+
+.leftside{
+	padding-left: 75px;
+	color:#4e4c4c;
+}
+
+.leftside{
+	padding-top: 30px;
+}
+.leftsidetd{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: 20px;
+}
+.leftsidetext{
+	padding-left: 32px;
+	padding-bottom: 5px;
+}
+
+.info{
+
+    width: 739px;
+    height: 617px;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px #ccc;
+    margin-top: 52px;
+    margin-left: 629px;
+    margin-right: 352px;
+}
+
+.shelter{
+	padding-left: 8px;
+	padding-top: 5px;
+}
+
+.infotitle{
+	font-size: 25px;
+	  
+    padding-right: 9px;
+	
+}
+
+.infotitlesurv{
+	font-size: 14px;
+    color: #797878;
+}
+
+.shelterimg{
+	    width: 0;
+    padding-right: 9px;
+    padding-bottom: 5px;
+}
+.button1{
+    padding-left: 30px;
+    padding-bottom: 40px;
+    
+}
+.map{
+	margin-left: 13px;
+	padding-bottom: 10px;
+}
+
+.maptd{
+	padding-bottom: 27px;
+}
+
+.rightside{
+	border: 1px solid black;
+}
+
+span{ 
+	font-size: 12px; 
+}
+
+
+body {
+	background-color: #EEEEEE;
+	margin:0 auto; 
+	}

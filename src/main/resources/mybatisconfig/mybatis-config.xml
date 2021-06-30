@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+		  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.brownpoodle.board.vo.BoardVO" alias="boardVO"/>	
+		<typeAlias type="com.brownpoodle.rboard.vo.RboardVO" alias="rboardVO"/>	
+		
+		<typeAlias type="com.brownpoodle.member.vo.MemberVO" alias="memberVO"/>	
+		<typeAlias type="com.brownpoodle.pet.vo.PetVO" alias="petVO"/>		
+			
+		<typeAlias type="com.brownpoodle.login.vo.ID_AuthNumVO" alias="id_AuthNumVO"/>	
+		<typeAlias type="com.brownpoodle.login.vo.PW_AuthNumVO" alias="pw_AuthNumVO"/>			 
+		<typeAlias type="com.brownpoodle.calendar.vo.CalendarVO" alias="calendarVO"/>
+		<typeAlias type="com.brownpoodle.walk.vo.WalkVO" alias="walkVO"/>
+		
+	</typeAliases>
+</configuration>

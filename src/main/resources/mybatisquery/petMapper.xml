@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.brownpoodle.pet.dao.PetDAO">
+
+<insert id="petInsert" parameterType="petVO">
+INSERT INTO PET(P_NUM, M_NUM, P_NAME, P_AGE, P_GENDER,
+                P_TYPE, P_VARIETY, P_PHOTO, P_REGNUM, 
+                P_DELETEYN,P_INSERTDATE,P_UPDATEDATE) 
+        VALUES ( #{p_num, jdbcType=VARCHAR},
+        		 #{m_num, jdbcType=VARCHAR},
+        		 #{p_name, jdbcType=VARCHAR},
+        		 #{p_age, jdbcType=VARCHAR},
+        		 #{p_gender, jdbcType=VARCHAR},
+        		 #{p_type, jdbcType=VARCHAR},
+        		 #{p_variety, jdbcType=VARCHAR},
+        		 #{p_photo, jdbcType=VARCHAR},
+        		 #{p_regnum, jdbcType=VARCHAR},
+        		 'Y', 
+        		 SYSDATE, 
+        		 SYSDATE)
+</insert>
+
+<select id="petSelect" parameterType="petVO" resultType="petVO">
+SELECT  A.P_NUM AS P_NUM,
+        A.P_NAME AS P_NAME, 
+        A.P_AGE AS P_AGE, 
+        A.P_GENDER AS P_GENDER, 
+        A.P_TYPE AS P_TYPE, 
+        A.P_VARIETY AS P_VARIETY, 
+        A.P_PHOTO AS P_PHOTO, 
+        A.P_REGNUM AS P_REGNUM, 
+        TO_CHAR(A.P_INSERTDATE, 'YYYY-MM-DD') AS P_INSERTDATE,
+        TO_CHAR(A.P_UPDATEDATE, 'YYYY-MM-DD') AS P_UPDATEDATE
+FROM PET A
+WHERE A.M_NUM = #{m_num, jdbcType=VARCHAR}
+  AND A.P_DELETEYN = 'Y'
+</select>
+
+<update id="petUpdate" parameterType="petVO">
+UPDATE PET 
+    SET 
+        P_NAME = #{p_name, jdbcType=VARCHAR}, 
+        P_AGE = #{p_age, jdbcType=VARCHAR}, 
+        P_GENDER = #{p_gender, jdbcType=VARCHAR}, 
+        P_TYPE = #{p_type, jdbcType=VARCHAR},
+        P_VARIETY = #{p_variety, jdbcType=VARCHAR},
+        P_PHOTO = #{p_photo, jdbcType=VARCHAR},
+        P_REGNUM = #{p_regnum, jdbcType=VARCHAR},
+        P_UPDATEDATE = SYSDATE
+    WHERE P_NUM = #{p_num, jdbcType=VARCHAR}
+    AND P_DELETEYN = 'Y'
+</update>
+
+<delete id="petDelete" parameterType="petVO">
+UPDATE PET 
+	SET P_DELETEYN = 'N', 
+	P_UPDATEDATE = SYSDATE 
+	WHERE P_NUM = #{p_num, jdbcType=VARCHAR} 
+	AND P_DELETEYN = 'Y'
+</delete>
+
+</mapper>

@@ -1,0 +1,133 @@
+@charset "EUC-KR";
+
+
+.logo{
+	padding-top: 19px;
+    padding-left: 445px;
+	
+}
+.login{
+ 
+	margin-top: 111px;
+	margin-left: 641px;
+	margin-right: 352px;
+	width: 680px;
+	border-collapse: collapse;
+	border-radius:8px;
+ 
+}
+
+.checkText{
+	font-size: 14px;
+}
+
+.id{
+	padding-top: 42px;
+	padding-bottom: 10px;
+	
+}
+ 
+.password{
+
+	padding-bottom: 14px;
+	
+}
+
+
+.idpassword{
+	padding-top: 30px;
+	
+}
+ 
+.findIdPw{
+	padding-top: 30px;
+	padding-botto: 10px;
+	font-size: 14px;	
+}
+
+.idCheckImg{
+	padding-right:9px;
+}
+
+.idCheck{
+	padding-bottom: 22px;
+}
+
+.joinMember{
+	padding-top: 30px;
+	
+}
+
+input:focus, textarea:focus, select:focus, option:focus {
+
+    outline:none!important;
+
+}
+
+h5{
+	
+	font-size: 33px; 
+	padding-bottom: 3px;
+}
+
+.name{
+	padding-top: 45px;
+	padding-bottom: 10px;
+    padding-right: 105px;
+	
+}
+
+.buttonCss{
+	padding-left: 10px;
+	padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.e-mail{
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.number{
+	padding-bottom: 15px;
+}
+
+.next{
+	padding-top: 10px;
+	padding-bottom: 55px;
+}
+
+.auth_num{
+	padding-left: 171px;
+}
+
+
+
+.rightside{
+	border: 1px solid black;
+}
+
+span{ 
+	font-size: 12px; 
+}
+
+
+body {
+	
+	margin:0 auto; 
+	}

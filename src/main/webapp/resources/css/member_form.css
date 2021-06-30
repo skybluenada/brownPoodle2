@@ -1,0 +1,240 @@
+@charset "EUC-KR";
+
+
+.logo{
+	padding-top: 19px;
+    padding-left: 445px;
+	
+}
+.login{
+ 
+    height: 95px;
+    border-radius: 8px;
+    margin-top: 52px;
+    margin-left: 726px;
+    margin-right: 352px;
+    width: 559px;
+    border-collapse: collapse;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 2px #ccc;
+     margin-bottom: 64px;
+}
+
+.loginlogo{
+	padding-top: 44px;
+	padding-bottom: 20px;
+}
+
+.m_id_padding{
+	padding-right: 268px;
+    padding-bottom: 5px;
+}
+
+.checkText{
+	font-size: 14px;
+	padding-left: 26px;
+}
+
+.id{
+
+	padding-bottom: 18px;
+	
+}
+ 
+.member{
+
+	padding-bottom: 22px;
+	
+}
+
+
+.idpassword{
+	padding-top: 30px;
+	
+}
+ 
+.findIdPw{
+	padding-top: 30px;
+	padding-botto: 10px;
+	font-size: 14px;	
+}
+
+.idCheckImg{
+	padding-right:9px;
+}
+
+.idCheck{
+	padding-bottom: 23px;
+}
+
+.confirm{
+	 margin-left: 10px;
+}
+
+.nextId{
+	margin-left: 10px;
+}
+
+.line{
+	padding-top: 28px;
+}
+.joinMember{
+	padding-top: 30px;
+    padding-bottom: 64px;
+	
+}
+
+..filebox label {
+   display: inline-block;
+  padding: .5em .75em;
+  color: #fff;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #f1f0f0;
+  cursor: pointer;
+  border: 1px solid #f1f0f0;
+  border-radius: .25em;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.filebox label:hover {
+    background-color: #f1f0f0;
+}
+
+.filebox label:active {
+ background-color: #ffffff;
+}
+
+.filebox input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+
+select{
+	
+    height: 41px;
+    width: 100px;
+    border: solid #ced4da 1px;
+    border-radius: 5px;
+    margin-left: 98px;
+	
+}
+
+
+input:focus, textarea:focus, select:focus, option:focus {
+
+    outline:none!important;
+
+}
+
+h5{
+	
+	font-size: 33px; 
+	padding-bottom: 3px;
+}
+
+.name{
+	padding-top: 45px;
+	padding-bottom: 10px;
+    padding-right: 95px;
+	
+}
+
+.newpw{
+	padding-top: 45px;
+	padding-bottom: 10px;
+	padding-left: 23px;
+	
+}
+
+.newpwcheck{
+	padding-top: 3px;
+	padding-bottom: 10px;
+	padding-left: 23px;
+}
+
+.pwcheck{
+
+    padding-top: 26px;
+    padding-left: 26px;
+	
+}
+
+.nextButton{
+	padding-left: 26px;
+}
+
+
+.buttonCss{
+	padding-left: 10px;
+	padding-top: 20px;
+    padding-bottom: 20px;
+
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.e-mail{
+	padding-bottom: 10px;
+	padding-left: 31px;
+}
+
+.number{
+	padding-bottom: 15px;
+}
+
+.next{
+	padding-top: 10px;
+	padding-bottom: 55px;
+}
+
+.auth_num{
+	padding-left: 177px;
+}
+
+.rightside{
+	border: 1px solid black;
+}
+
+
+.checkBox{
+    padding-top: 30px;
+    background-color: #F6F6F6;
+    height: 118px;
+    width: 369px;
+}
+
+.button2{
+	padding-top: 31px;
+}
+span{ 
+	font-size: 12px; 
+}
+
+
+body {
+		background-color: #EEEEEE; 
+	margin:0 auto; 
+	}

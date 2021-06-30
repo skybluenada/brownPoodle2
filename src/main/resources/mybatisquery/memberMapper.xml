@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.brownpoodle.member.dao.MemberDAO">
+
+<insert id="memberInsert" parameterType="memberVO">
+INSERT INTO MEMBER (M_NUM, M_ID, M_PW, M_EMAIL, M_NAME, 
+                    M_NICK, M_PHOTO, M_PHONE, M_ADDR,
+                    M_SNSTYPE, M_SNSID, M_DELETEYN, M_INSERTDATE, M_UPDATEDATE)
+            VALUES ( #{m_num, jdbcType=VARCHAR},
+            		 #{m_id, jdbcType=VARCHAR},
+            		 #{m_pw, jdbcType=VARCHAR},
+            		 #{m_email, jdbcType=VARCHAR},
+            		 #{m_name, jdbcType=VARCHAR},
+            		 #{m_nick, jdbcType=VARCHAR},
+            		 #{m_photo, jdbcType=VARCHAR},
+            		 #{m_phone, jdbcType=VARCHAR},
+            		 #{m_addr, jdbcType=VARCHAR},
+            		 #{m_snstype, jdbcType=VARCHAR},
+            		 #{m_snsid, jdbcType=VARCHAR},
+            		 'Y',
+            		 SYSDATE,
+            		 SYSDATE )
+</insert>
+
+<!-- 들어오는 vo경로 앨리어스 = parameterType -->
+
+<select id="memberIdCheck" parameterType="memberVO" resultType="Integer">
+	SELECT COUNT(*) FROM MEMBER
+	WHERE M_ID = #{m_id}
+</select>
+
+<select id="memberSelect" parameterType="memberVO" resultType="memberVO">
+SELECT  A.M_NUM AS M_NUM, 
+        A.M_ID AS M_ID, 
+        A.M_PW AS M_PW, 
+        A.M_EMAIL AS M_EMAIL, 
+        A.M_NAME AS M_NAME, 
+        A.M_NICK AS M_NICK, 
+        A.M_PHOTO AS M_PHOTO, 
+        A.M_PHONE AS M_PHONE, 
+        A.M_ADDR AS M_ADDR,
+        A.M_SNSTYPE AS M_SNSTYPE, 
+        A.M_SNSID AS M_SNSID, 
+        TO_CHAR(A.M_INSERTDATE, 'YYYY-MM-DD') AS M_INSERTDATE,
+        TO_CHAR(A.M_UPDATEDATE, 'YYYY-MM-DD') AS M_UPDATEDATE
+FROM MEMBER A
+WHERE A.M_NUM = #{m_num, jdbcType=VARCHAR}
+    AND A.M_DELETEYN = 'Y'
+</select>
+
+<update id="memberUpdate" parameterType="memberVO">
+UPDATE MEMBER 
+    SET 
+        M_PW = #{m_pw, jdbcType=VARCHAR} , 
+        M_EMAIL = #{m_email, jdbcType=VARCHAR} , 
+        M_NAME = #{m_name, jdbcType=VARCHAR} , 
+        M_NICK = #{m_nick, jdbcType=VARCHAR} ,
+        M_PHOTO = #{m_photo, jdbcType=VARCHAR} ,
+        M_PHONE = #{m_phone, jdbcType=VARCHAR} ,
+        M_ADDR = #{m_addr, jdbcType=VARCHAR} ,
+        M_UPDATEDATE = SYSDATE
+    WHERE M_NUM = #{m_num, jdbcType=VARCHAR}
+    AND M_DELETEYN = 'Y'
+</update>
+
+<delete id="memberDelete" parameterType="memberVO">
+UPDATE MEMBER 
+	SET M_DELETEYN = 'N' , 
+	M_UPDATEDATE = SYSDATE 
+	WHERE M_NUM = #{m_num, jdbcType=VARCHAR} 
+	AND M_DELETEYN = 'Y'
+</delete>
+
+</mapper>
